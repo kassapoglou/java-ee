@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Java EE</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="java_ee_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+ <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                              <li><a href="https://kassapoglou.github.io/main/forum.html">Forum</a></li>
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 2 JAVA EE - Servlet Creation and Explanation </h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">8</div>
+                        <div class="month">Nov</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+                    
+                    <p>Αν και μπορεί να ακούγεται παράξενο, τα Java Servlets 
+                        ήταν η πρώτη προσπάθεια για να παράγουμε δυναμικές
+                         Java Web εφαρμογές. Η έκδοση 3.0, που ήταν μέρος του 
+                        Java EE 6, έδωσε μια καινούργια νοοτροπία στο πως χτίζουμε
+                        μια Java Web εφαρμογή.</p>
+                    
+                    <p>Αν και είναι κάπως δύσκολο να χτιστεί μια ολόκληρη 
+                        ιστοσελίδα μόνο με Servlets, η χρήση τους στο 
+                        MVC μοντέλο ήταν πολύ συχνή αφού είχαν και έχουν
+                        τον ρόλο του Controller. </p>
+                    
+                    <p>Βασικά ακόμα και σήμερα τα Servlets είναι η
+                        βάση για όλες τις Java EE εφαρμογές. Web frameworks, 
+                        όπως JSP (Java Server Pages) και JSF (Java Server Faces),
+                         στην πραγματικότητα γίνονται compile σε Java Servlets για 
+                        να μπορούν να εκτελεστούν σωστά στο Web Container του Application Server.
+                         Δεν θα εμβαθύνουμε πολύ στα Servlets αν και είναι πολύ χρήσιμα,
+                        στα σίγουρα όμως θα μάθουμε αρκετά πράγματα έτσι ώστε να 
+                        μπορούμε αργότερα να τα χρησιμοποιήσουμε σαν Clients στις 
+                        Enterprise Εφαρμογές που θα δημιουργήσουμε. </p>
+                    
+                    <p>Τι είναι λοιπόν τα Servlets? Τα Servlets είναι Java 
+                        κλάσεις που ακολουθούν τους κανόνες του Java Servlet 
+                        API και έχουν την ικανότητα να απαντούν σε web αιτήματα.
+                        Αν και θεωρητικά μπορούν να ανταποκριθούν σε οποιοδήποτε 
+                        είδος αιτήματος, κυρίως χρησιμοποιούνται για να απαντούν
+                        σε http αιτήματα. </p>
+                    
+                    
+                    <p>Για να μπορεί να εκτελεστεί σωστά ένα Servlet
+                         πρέπει να γίνει deploy σε ένα Web container δηλαδή 
+                        σε κάποιον application server όπως Tomcat, Payara, Wildfly κτλ. 
+                        Επειδή κάθε Servlet κληρονομεί από το Servlet API, έχει την δυνατότητα 
+                        να παρέχει συγκεκριμένα αντικείμενα που προσθέτουν δυνατότητες στην λειτουργία του. 
+                        Μερικά από τα αντικείμενα είναι το request, το response, το pageContext 
+                        και άλλα. Εμείς απλά θα μείνουμε στα request και response αντικείμενα αφού 
+                        με αυτά μπορούμε να εκτελέσουμε αρκετές από τις λειτουργίες που θέλουμε. </p>
+                    
+                    <p>Όπως είπαμε και στην αρχή της ενότητας, τα Servlets είναι
+                        στην πραγματικότητα java classes και αυτό σημαίνει ότι 
+                        μπορούμε να αναπτύξουμε ότι κώδικα Java θέλουμε μέσα σε 
+                        αυτά. Άλλωστε για αυτό και συνηθίζουμε να τα χρησιμοποιούμε 
+                        σαν clients σε απλά Web παραδείγματα για να δείξουμε την 
+                        λειτουργία μιας απλής εφαρμογής. Μπορούμε να γράψουμε Java 
+                        κώδικα, ενώ ταυτόχρονα να δείχνουμε και το αποτέλεσμα στην 
+                        οθόνη σε html μορφή.</p>
+                    
+                    
+                    <p>Ιστορικά, το Servlet 3.1 specification ήταν μέρος του Java EE 7 
+                        που ακόμα χρησιμοποιούμε και θα γράφουμε κώδικα σε αυτό 
+                        για πολύ καιρό ακόμα. Μέσα σε αυτήν την έκδοση είδαμε 
+                        καινούργια χαρακτηριστικά στα Servlets όπως υποστήριξη 
+                        του HTTP 1.1, non-blocking ασύγχρονο I/O και πολλά άλλα. 
+                        Το καινούργιο Servlet 4.0 specification, το οποίο είναι
+                        μέρος του Java EE 8 φέρνει μαζί του ακόμα καλύτερες 
+                        βελτιώσεις όπως request/response mutliplexing, server push,
+                        stream prioritization και άλλα. Κάποιες από αυτές τις βελτιώσεις 
+                        συμβαίνουν χωρίς εμείς να μπορούμε να επέμβουμε ενώ κάποιες άλλες
+                        όπως το server push δίνουν στον προγραμματιστή επιπλέον δυνατότητες 
+                        να πειραματιστεί. </p>
+                    
+                    <p>Για να ξεκινήσουμε να δημιουργήσουμε ένα Servlet, έτσι ώστε να καταλάβουμε
+                        καλύτερα την συμπεριφορά του, πρέπει πρώτα να
+                        δημιουργήσουμε ένα Web Project.</p>
+                    <p>Σαν πρώτο βήμα, πρέπει να ξεκινήσουμε τον Payara 
+                        Application Server κάνοντας δεξί κλικ επάνω του 
+                        και επιλέγοντας Start.</p>
+                    
+                    <p>Έπειτα πηγαίνουμε στο κύριο μενού και επιλέγουμε File → New Project. 
+                        Από το εμφανιζόμενο παράθυρο επιλέγουμε Java Web κάτω από την
+                        κατηγορία Java with Ant ενώ από την λίστα των projects επιλέγουμε
+                        Web Application. Πατάμε Next για να συνεχίσουμε στο επόμενο βήμα.</p>
+                    
+                    
+                    
+                    
+                       <p><a><img src="java-ee-unit2/java-ee-unit2-1.JPG" alt="" class="center"></a></p>
+                              
+                       <p>Δίνουμε ένα όνομα στο Web Project και αν
+                           επιθυμούμε επιλέγουμε και το που θα αποθηκευτεί.
+                           Όταν έχουμε αυτά τα στοιχεία πατάμε Next.</p>   
+                       
+                        <p><a><img src="java-ee-unit2/java-ee-unit2-2.JPG" alt="" class="center"></a></p>
+                        
+                        <p>Σε αυτό το στάδιο επιλέγουμε τον Application Server στον 
+                            οποίο θα γίνει deploy το project μας εφόσον είναι έτοιμο
+                            να το δοκιμάσουμε. Εδώ φαίνονται όλοι οι Application Servers
+                            που είναι δηλωμένοι στο NetBeans. Στην δική μας περίπτωση
+                            επιλέγουμε τον Payara Server. Θα παρατηρήσετε ότι το Java 
+                            EE Version αλλάζει αυτόματα σε Java EE 8 Web. Αυτό είναι μια
+                            ρύθμιση του NetBeans για να γνωρίζει την έκδοση του Java
+                            EE framework όταν θα κάνει compile το project σας. Αν
+                            λοιπόν κάνατε και αυτές τις τελευταίες ρυθμίσεις πατήστε 
+                            Finish να δημιουργηθεί το Web Project. Δεν είναι ανάγκη
+                            να πατήσετε Next γιατί δεν θέλουμε να επιλέξουμε κάποιο
+                            επιπρόσθετο framework που μπορεί να μας προτείνει το
+                            NetBeans. Όλα τα project μας θα τα δημιουργήσουμε με 
+                            μόνο Java EE 8 βιβλιοθήκες.</p>
+                        
+                        <p><a><img src="java-ee-unit2/java-ee-unit2-3.JPG" alt="" class="center"></a></p>
+                        
+                        <p>Τώρα έχουμε την βασική μορφή ενός Project δημιουργημένο 
+                            μέσα από το NetBeans. Το project περιέχει ήδη ένα
+                            index.html αρχείο αν θέλετε να σηκώσετε αυτό το project 
+                            στον Payara και να δείτε το αποτέλεσμα στον browser. 
+                            Ας το κάνουμε αυτό. Κάνετε δεξί κλικ επάνω στο
+                            SimpleServerProject όνομα και επιλέγετε Clean
+                            and Build. Μετά το τέλος αυτής της διαδικασίας 
+                            θα δημιουργηθεί ένα αρχείο με κατάληξη war που
+                            βασικά είναι όλο το Web project μας.</p>
+                        
+                        <p><a><img src="java-ee-unit2/java-ee-unit2-4.JPG" alt="" class="center"></a></p>
+                   <p><a><img src="java-ee-unit2/java-ee-unit2-5.JPG" alt="" class="center"></a></p>
+                   
+                   <p>Από την στιγμή που έχει δημιουργηθεί το project μας 
+                       με κατάληξη war σημαίνει ότι δεν βρέθηκαν λάθη
+                       κατά την διάρκεια του compilation οπότε είμαστε
+                       έτοιμοι για το deploy στον Application Server. 
+                       Αυτό γίνεται αν κάνουμε πάλι δεξί κλικ επάνω στο
+                       SimpleServerProject και επιλέξουμε Run. Αυτή η 
+                       εντολή κάνει deploy την εφαρμογή μας στον application
+                       server και ταυτόχρονα μας δείχνει την index.html σελίδα
+                       στον browser όπως μας την προσφέρει ο application server.</p>
+                   
+                    <p><a><img src="java-ee-unit2/java-ee-unit2-6.JPG" alt="" class="center"></a></p>
+                    <p><a><img src="java-ee-unit2/java-ee-unit2-7.JPG" alt="" class="center"></a></p>
+                    
+                    <p>Τώρα που έχουμε την βασική δομή του project μπορούμε
+                        να δημιουργήσουμε το πρώτο μας Servlet. Κάνουμε 
+                        δεξί κλικ επάνω στο Source Packages και δημιουργούμε
+                        ένα δικό μας πακέτο επιλέγοντας New → package και δίνοντας
+                        το όνομα com.mycompany. Όταν τελειώσετε πατήστε Finish.</p>
+                    
+                     <p><a><img src="java-ee-unit2/java-ee-unit2-8.JPG" alt="" class="center"></a></p>
+                     
+                     <p><a><img src="java-ee-unit2/java-ee-unit2-9.JPG" alt="" class="center"></a></p>
+                     
+                     <p>Τώρα κάνουμε δεξί κλικ επάνω στο δημιουργημένο
+                         πακέτο και επιλέγουμε New → Servlet.</p>
+                     
+                     <p><a><img src="java-ee-unit2/java-ee-unit2-10.JPG" alt="" class="center"></a></p>
+                     
+                     <p>Δίνουμε το όνομα MyServlet, ή όποιο άλλο όνομα θέλετε εσείς, και πατήστε Next.</p>
+                     <p><a><img src="java-ee-unit2/java-ee-unit2-11.JPG" alt="" class="center"></a></p>
+                     
+                     <p>Τσεκάρετε το Add information to deployment descriptor (web.xml) και πατάτε Finish.</p>
+                     
+                     <p><a><img src="java-ee-unit2/java-ee-unit2-12.JPG" alt="" class="center"></a></p>
+                     
+                     <p>Ενώ έχει ήδη δημιουργηθεί το Servlet παρατηρούμε ότι το αρχείο
+                         είναι κόκκινο. Το NetBeans μας ειδοποιεί με αυτό τον τρόπο
+                         ότι λείπουν κάποιες βιβλιοθήκες από το project μας. Θα πρέπει
+                         λοιπόν να πάμε και να προσθέσουμε τις βιβλιοθήκες του Java EE 8. </p>
+                     
+                      <p><a><img src="java-ee-unit2/java-ee-unit2-13.JPG" alt="" class="center"></a></p>
+                      
+                      <p>Το NetBeans έχει φροντίσει να έχει αυτές τις βιβλιοθήκες έτοιμες για εμάς. 
+                          Κάνουμε δεξί κλικ επάνω στο project και επιλέγουμε Properties.</p>
+                      
+                  <p><a><img src="java-ee-unit2/java-ee-unit2-14.JPG" alt="" class="center"></a></p>
+                  
+                  <p>Στο παράθυρο που εμφανίζεται έχουμε να κάνουμε μερικές αλλαγές.
+                      Πάνω από όλα βεβαιωνόμαστε ότι η Java Platform είναι JDK 1.8.
+                      Εάν δεν είναι τότε χρειάζεται να το αλλάξουμε. Έπειτα πατάμε 
+                      στο κουμπί Add Library και από την εμφανιζόμενη λίστα επιλέγουμε 
+                      Java EE Web 8 API Library.</p>
+                  
+                  <p><a><img src="java-ee-unit2/java-ee-unit2-15.JPG" alt="" class="center"></a></p>
+                  
+                   <p><a><img src="java-ee-unit2/java-ee-unit2-16.JPG" alt="" class="center"></a></p>
+                   
+                 <p><a><img src="java-ee-unit2/java-ee-unit2-17.JPG" alt="" class="center"></a></p>
+
+                 <p>Δεν κλείνουμε το παράθυρο ακόμα. Πρέπει να ορίσουμε,
+                     ότι όταν ξεκινήσει το Project μας, θα εμφανίζει
+                     το Servlet σαν πρώτη σελίδα και όχι την default index.html.
+                     Για το πετύχουμε αυτό, κάνουμε κλικ στο Run και γράφουμε στο 
+                     Relative URL το όνομα του Servlet το οποίο είναι MyServlet.
+                     Έχουμε κάνει όλες τις απαραίτητες αλλαγές οπότε μπορείτε να πατήσετε ΟΚ.
+</p>
+  <p><a><img src="java-ee-unit2/java-ee-unit2-18.JPG" alt="" class="center"></a></p>
+  
+  <p>Επειδή το project μας είναι χτισμένο σε Java EE8 είναι
+      απαραίτητη προϋπόθεση να ενεργοποιήσουμε την ιδιότητα 
+      αυτόματης εύρεσης των αντικειμένων που προσφέρει το Java 
+      EE 8 framework. Αυτό γίνεται προσθέτοντας είναι beans.xml αρχείο στο project.
+      Ας δούμε λοιπόν τα βήματα που απαιτούνται.</p>
+  
+  <p>Κάνουμε δεξί κλικ επάνω στο project και επιλέγουμε New → Other.</p>
+  
+  <p><a><img src="java-ee-unit2/java-ee-unit2-19.JPG" alt="" class="center"></a></p>
+  
+  <p>Από τα Categories επιλέγουμε Contexts and Dependency Injection 
+      και από τα File Types επιλέγουμε beans.xml. Πατάμε Next, και
+      μετά Finish για να δεχτούμε το όνομα και τον φάκελο μέσα στον 
+      οποίο θα αποθηκευτεί το beans.xml αρχείο.</p>
+  
+  <p><a><img src="java-ee-unit2/java-ee-unit2-20.JPG" alt="" class="center"></a></p>
+  <p><a><img src="java-ee-unit2/java-ee-unit2-21.JPG" alt="" class="center"></a></p>
+    <p><a><img src="java-ee-unit2/java-ee-unit2-22.JPG" alt="" class="center"></a></p>
+    
+    <p>To Servlet μας είναι έτοιμο. Τώρα μπορούμε να 
+        γράψουμε ένα απλό μήνυμα που θα εμφανίζεται στον
+        Browser. Υπάρχουν όμως κάποια μικρά θεωρητικά 
+        στοιχεία που πρέπει να αναλύσουμε για να κατανοήσουμε
+        καλύτερα την λειτουργία του Servlet πριν προχωρήσουμε
+        στην εγγραφή και εκτέλεση ενός Servlet κώδικα. 
+    </p>
+  
+    <p>Αν κοιτάξουμε λίγο τον κώδικα του Servlet 
+        που δημιουργήσαμε, θα δούμε πως έχουν δημιουργηθεί 
+        δύο μέθοδοι : doGet και doPost που βασικά ανταποκρίνονται
+        σε GET και POST calls που δέχονται δια μέσου του HTTP 
+        πρωτοκόλλου. Η μέθοδος processRequest είναι ένα δημιούργημα
+        του wizard του NetBeans για να μας διευκολύνει με τον κώδικα μας.
+        Στην ουσία το NetBeans έχει δημιουργήσει μια τρίτη μέθοδο 
+        που είτε την doPost καλέσουμε είτε την doGet θα εκτελεστεί
+        η processRequest. Για τα δικά μας απλά παραδείγματα αυτή
+        η ευκολία μας εξυπηρετεί αλλά για πιο εξειδικευμένες
+        περιπτώσεις θα ήταν καλύτερα να γράφατε τον κώδικα μέσα
+        στην doPost ή στην doGet. Το Servlet μας λοιπόν απόκτησε
+        την ικανότητα να ακούει σε http καλέσματα λόγω της κληρονομικότητας
+        από την κλάση HttpServlet (η πρώτη γραμμή της κλάσης μας 
+        είναι public class MyServlet extends HttpServlet) που και
+        αυτό με την σειρά του κληρονομεί από μια πιο γενική κλάση
+        που ονομάζεται GenericServlet. Το αποτέλεσμα αυτής της
+        κληρονομικότητας είναι ότι το Servlet μας μπορεί να 
+        διαχειριστεί HTTP καλέσματα και μπορεί ταυτόχρονα να 
+        περιέχει Java κώδικα. </p>
+    
+    <p>Τέλος αν προσέξουμε τις μεθόδους, θα παρατηρήσουμε
+        ότι οι παράμετροι που περνάμε είναι είδος HttpServletRequest 
+        και HttpServletResponse. Το HttpServletResponse αντικείμενο 
+        προετοιμάζει την απάντηση έτσι ώστε να την επιστρέψει στον
+         browser. </p>
+    
+    <p>Οι HttpServlet μέθοδοι που έχουμε στην διάθεση μας γενικότερα είναι οι εξής: </p>
+    
+    <p><a><img src="java-ee-unit2/java-ee-unit2-23.JPG" alt="" class="center"></a></p>
+
+    <p>Ας αλλάξουμε των κώδικα του MyServlet όπως δείχνει το πιο κάτω παράδειγμα.</p>
+    
+    <pre><xmp class="prettyprint lang-html">
+    package com.mycompany;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyServlet extends HttpServlet {
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Kassapoglou Site</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Welcome to Kassapoglou site</h1>");
+            out.println("<p/>");
+            out.println("<h1>Free Lessons on Open Source Technologies</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
+
+
+    </xmp></pre>
+    
+    
+    <p>Μια τελευταία επιλογή πριν τρέξουμε το project είναι 
+        εκείνη του Browser. Πατήστε το εικονίδιο που δείχνει
+        τους Browser και επιλέξτε έναν μοντέρνο Browser όπως
+        Edge, Mozilla ή Chrome.</p>
+    
+    <p><a><img src="java-ee-unit2/java-ee-unit2-24.JPG" alt="" class="center"></a></p>
+    
+    <p>Κάνουμε δεξί κλικ επάνω στο project και επιλέγουμε Run. 
+        Αφού το project γίνει deployed στον application server, 
+        θα ανοίξει ο browser που έχετε επιλέξει και θα εμφανιστεί 
+        το μήνυμα μας. 
+</p>
+
+ <p><a><img src="java-ee-unit2/java-ee-unit2-25.JPG" alt="" class="center"></a></p>
+ 
+ <p>Αν και μπορεί να χρειάστηκαν αρκετά screenshots για 
+     να περιγράψουμε την διαδικασία δημιουργίας ενός 
+     Web Project, στην πραγματικότητα η διαδικασία παίρνει 
+     1-2 λεπτά και είναι πολύ εύκολη. Από την επόμενη
+     ενότητα θα θεωρήσω ότι γνωρίζετε την διαδικασία 
+     οπότε δεν θα επαναλάβουμε τα βήματα εκτός και αν 
+     θέλουμε να προσθέσουμε κάποια έξτρα λεπτομέρεια.</p>
+    
+                  <!--  <p >Ενότητα 1 - <a href="java-unit1-installation.html"><font color="#0000CC">Java Installation on Windows</font> </a><br /></p>
+                    <p >Ενότητα 2 - <a href="java-unit2-netbeans-and-hello-world-explanation.html"><font color="#0000CC">NetBeans Installation and Hello World Java Program Explanation</font> </a><br /></p>
+                    <p >Ενότητα 3 - <a href="java-unit3-JDK-JVM-and-Java-Project-structure-explanation.html"><font color="#0000CC">JDK and Application JAR creation</font> </a><br /></p> -->
+                </div><!-- .single-post-wrap -->
+
+             
+
+           
+
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να προγραμματίζετε σε Java EE. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
