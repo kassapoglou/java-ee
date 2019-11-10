@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Java EE</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="java_ee_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+ <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                              <li><a href="https://kassapoglou.github.io/main/forum.html">Forum</a></li>
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 3 JAVA EE - Passing Data to a Servlet </h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">11</div>
+                        <div class="month">Nov</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+                    
+                    <p>Στο πρώτο μας παράδειγμα με τα Servlets <a href="https://kassapoglou.github.io/java-ee/java-ee-unit2-Servlet-example.html">
+                            <font color="#0000CC">(Ενότητα 2)</font> </a>, 
+                        είδαμε πως μπορούμε να χρησιμοποιήσουμε ένα Servlet
+                        σαν Web Client και να παρουσιάζουμε μηνύματα στον Browser 
+                        προσθέτοντας println( ) μεθόδους που περιέχουν html tags</p>
+                    
+                    
+                    
+                    <p>  Όπως ήδη ίσως έχετε παρατηρήσει, είναι κάπως κουραστικό στο 
+                        να παρουσιάζουμε μηνύματα στο browser δια μέσω ενός servlet,
+                         αφού κάθε ένα HTML tag πρέπει να οριστεί ξεχωριστά μέσα σε
+                        μια println( ) μέθοδο. Για την παρουσίαση ενός απλού μηνύματος
+                        η πιο πάνω διαδικασία είναι αποδεκτή. Αλλά γίνεται κάπως 
+                        χρονοβόρα όταν θέλουμε να δημιουργήσουμε μια input form
+                        μέσα από την οποία ο χρήστης μπορεί να καταχωρήσει 
+                        τα στοιχεία του και να αποθηκευτούν σε μια βάση 
+                        δεδομένων. Για αυτό το λόγο δεν θα δούμε το
+                         Servlet σε production εφαρμογές να χρησιμοποιείται σαν client.</p>
+                    
+                    
+                    
+                    <p>Συνήθως το Servlet, σε μια enterprise εφαρμογή περιορίζεται
+                        στο να παίζει το ρόλο του controller και να περνάει
+                        στην εφαρμογή πληροφορίες που έχει λάβει από ένα 
+                        HTML αρχείο ή ένα JSP αρχείο. Οπότε γεννιέται το
+                        εξής ερώτημα: Πως μπορεί ένα servlet να διαβάσει 
+                        τι τιμές που έχουν εισαχθεί σε μια html σελίδα?  </p>
+                    
+                    
+                    <p>Ο καλύτερος τρόπος για να απαντήσουμε αυτή την 
+                        ερώτηση είναι να δούμε ένα παράδειγμα. Στην πιο
+                        κάτω εφαρμογή, ζητάμε από τον χρήστη να εισάγει από ποια
+                        πόλη πετάνε, που θέλουν να πάνε και ποια ημέρα για να μπορέσει
+                        η εφαρμογή να κάνει κράτηση ενός θεωρητικού αεροπορικού
+                        εισιτηρίου. Την φόρμα εισαγωγής των πιο πάνω στοιχείων
+                        τα ζητάμε μέσα από μια html σελίδα με το όνομα index.html.</p>
+                    
+                    
+                    
+                    
+                    <p>Δημιουργείστε ένα καινούργιο Web Project με το όνομα
+                        HtmlToServlet. Κάθε project που δημιουργούμε
+                        περιέχει μια index.html σελίδα. Αλλάζουμε 
+                        τον κώδικα του index.html στον εξής: </p>
+                    <p><strong>index.html</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flight Reservation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Reserve your flight</h1>
+        <form method="POST" action="SimpleServlet">
+            <label for="dept">Where are you flying from: </label>
+            <input type="text" id="dept" name="dept" /><br><br>
+            <label for="dest">Where are you flying to: </label>
+            <input type="text" id="dest" name="dest" /><br><br>
+            <label for="myday">What day are you flying: </label>
+            <input type="text" id="myday" name="myday" /><br><br>
+            <input type="submit" value="Submit Form"/>
+            <input type="reset" value="Reset Form" />
+        </form>
+    </body>
+</html>
+</xmp></pre>
+                    
+                    
+                    
+                    <p>Έχουμε δημιουργήσει μια απλή HTML φόρμα στην οποία
+                        ο χρήστης μπορεί να καταχωρήσει τα
+                        στοιχεία της πτήσης για την οποία θέλει να
+                        κλείσει ένα εισιτήριο. Για να γίνει η καταχώρηση,
+                        πατάμε το κουμπί Submit το οποίο στέλνει τις
+                        πληροφορίες μέσω της POST μεθόδου στο SimpleServlet.
+                        Αυτό που μας έχει μείνει τώρα είναι να δημιουργήσουμε
+                        τον κώδικα του SimpleServlet.</p>
+                    
+                    
+                    <p>Δημιουργούμε λοιπόν ένα πακέτο με το όνομα
+                        com.mycompany και μέσα στο πακέτο δημιουργούμε
+                        ένα Servlet με το όνομα SimpleServlet. </p>
+                    
+                    <p><a><img src="java-ee-unit3/java-ee-unit3-1.JPG" alt="" class="center"></a></p>
+                    
+                    <p>Οπότε πως μπορεί το Servlet τώρα να δεχτεί αυτά
+                        τα στοιχεία? Την ιδιότητα του αυτή την 
+                        αποκτάει μέσα από το request αντικείμενο της μεθόδου doPost. 
+                        Χρησιμοποιούμε την doPost για να διαβάσουμε
+                        και να απαντήσουμε το αίτημα του χρήστη, γιατί
+                        η φόρμα στέλνει στο Servlet την πληροφορία
+                        καλώντας την POST μέθοδο του HTTP.</p>
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+                    <p>Μέσα στην μέθοδο, καλούμε την μέθοδο getParameter
+                         του αντικειμένου request που έχει την δυνατότητα
+                        να διαβάσει την τιμή ενός συγκεκριμένου html tag 
+                        αρκεί να δηλώσουμε σωστά το id του html tag. Ας
+                        δούμε τον κώδικα του doPost και θα συνεχίσουμε
+                        με την θεωρία μας. Σας υπενθυμίζω ότι μπορούμε 
+                        να γράψουμε τον κώδικα μας μέσα στην processRequest
+                        μέθοδο αφού αυτή καλείται από την doPost. 
+                        Ο κώδικας λοιπόν του SimpleServlet είναι ο εξής:</p>
+                    
+                    
+                    <p><strong>SimpleServlet.java</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+package com.mycompany;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SimpleServlet extends HttpServlet {
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            String dept = request.getParameter("dept");
+            String dest = request.getParameter("dest");
+            String myday = request.getParameter("myday");
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Flight Reservation</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<p>Your Departure City is: " + dept);
+            out.println("<p>Your final Destination is: " + dest);
+            out.println("<p>the day you are flying is: " + myday);
+            out.println("<p/>");
+            out.println("<a href='index.html'>Add another flight</a>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
+
+</xmp></pre>
+                    
+                    <p>Αφού διαβάσουμε την τιμή που περιέχει
+                        το κάθε html component, την αναθέτουμε σε μια 
+                        String μεταβλητή. Εδώ χρειάζεται λίγο προσοχή.
+                        Ότι είδος πληροφορίας και αν καταχωρήσει ο χρήστης,
+                        θα το διαβάσει το request.getParameter σαν String.
+                         Στο δικό μας παράδειγμα, επειδή ζητάμε ονόματα, 
+                        δεν χρειάζεται κάποια μετατροπή. Αν όμως ζητούσαμε
+                        και αριθμητικές τιμές (π.χ επιθυμητή τιμή εισιτηρίου)
+                        τότε θα χρειαστεί να κάνουμε μετατροπή της μεταβλητής
+                        από String σε integer ή double. </p>
+    
+                    <p>Για παράδειγμα, ας υποθέσουμε ότι διαβάζουμε ένα html tag με το id price. </p>
+                    
+                    <p><strong>String ticketPrice = request.getParameter(“price”);</strong></p>
+                    <p><strong>double ticket = Double.valueOf(ticketPrice);</strong></p>
+                    
+                    <p>Αφού λοιπόν διαβάσουμε την πληροφορία και την έχουμε
+                        μετατρέψει στην επιθυμητή μορφή, πρέπει να πάρουμε
+                        την απόφαση αν θα εκτελέσει το Servlet την λογική και
+                        θα επιστρέψει κάποια απάντηση στον τελικό χρήστη, ή θα
+                        μεταφέρει την πληροφορία σαν java αντικείμενο σε κάποια
+                        άλλη κλάση της εφαρμογής για να εκτελεστεί κάποιο 
+                        συγκεκριμένο business logic. Στο δικό μας παράδειγμα,
+                        απλά διαβάζουμε την πληροφορία και το ίδιο το Servlet 
+                        δείχνει το αποτέλεσμα στο τελικό χρήστη. Ταυτόχρονα, 
+                        δια μέσω του <a> tag, επιτρέπουμε στον χρήστη να 
+                            μπορεί να επιστρέψει στο homepage της εφαρμογής. 
+                            Στην επόμενη ενότητα θα δούμε το Servlet να 
+                            συμπεριφέρεται σαν καθαρόαιμο controller γιατί
+                            απλά θα προωθεί τα στοιχεία σε άλλη κλάση. Στο
+                            δικό μας παράδειγμα, απλά δείχνουμε τον τρόπο 
+                            με τον οποίο ένα Servlet μπορεί να διαβάσει
+                            πληροφορίες από μια HTML σελίδα. </p>
+                    
+                    <p>Πριν τρέξετε το Project, κάνουμε δεξί κλίκ επάνω στο Project,
+                    επιλέγουμε Properties και μετά Run. Στο πλαίσιο Relative URL 
+                    γράφουμε index.html. Το project μας θα ξεκινήσει τώρα από την 
+                    index.html.</p>
+                    
+                    <p><a><img src="java-ee-unit3/java-ee-unit3-2.JPG" alt="" class="center"></a></p>
+                    <p><a><img src="java-ee-unit3/java-ee-unit3-3.JPG" alt="" class="center"></a></p>
+                    
+                  <!--  <p >Ενότητα 1 - <a href="java-unit1-installation.html"><font color="#0000CC">Java Installation on Windows</font> </a><br /></p>
+                    <p >Ενότητα 2 - <a href="java-unit2-netbeans-and-hello-world-explanation.html"><font color="#0000CC">NetBeans Installation and Hello World Java Program Explanation</font> </a><br /></p>
+                    <p >Ενότητα 3 - <a href="java-unit3-JDK-JVM-and-Java-Project-structure-explanation.html"><font color="#0000CC">JDK and Application JAR creation</font> </a><br /></p> -->
+                </div><!-- .single-post-wrap -->
+
+             
+
+           
+
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να προγραμματίζετε σε Java EE. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
