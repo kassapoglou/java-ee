@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Java EE</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="java_ee_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+ <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                              <li><a href="https://kassapoglou.github.io/main/forum.html">Forum</a></li>
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 5 JAVA EE - Stateless Session Beans (Part 2) </h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">25</div>
+                        <div class="month">Nov</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+                    
+                    
+                    <p>Στην δωρεάν ενότητα Java EE θα συνεχίσουμε  
+                        την ανάλυση μας στα Stateless Session Beans. 
+                        Στην προηγούμενη ενότητα μιλήσαμε για την περίπτωση όπου
+                        έχουμε instance variables μέσα σε ένα Stateless
+                        Session Bean και μέσω των getter και setter μεθόδων
+                        είχαμε την δυνατότητα να διαχειριστούμε τις τιμές 
+                        τις οποίες μπορούσαν να πάρουν αυτές οι μεταβλητές.
+                        Όπως είχαμε αναφέρει, και θα το αναφέρουμε ξανά μέσα
+                        σε αυτή την ενότητα, το να έχουμε instance variables
+                        μέσα σε ένα Stateless Session Bean είναι σχεδόν μια 
+                        άκυρη διαδικασία. Επειδή δεν διατηρείται το conversation 
+                        state με τον client δεν ξέρουμε αν θα πάρουμε πίσω 
+                        την τιμή με την οποία ισούται η instance μεταβλητή
+                        ή απλά θα λάβουμε null γιατί εκείνη την στιγμή
+                        που ζητήσαμε την τιμή με μια getter μέθοδο κάποιο 
+                        άλλο αντικείμενο ήταν διαθέσιμο που δεν γνώριζε την
+                        προηγούμενη τιμή της μεταβλητής. </p>
+                    
+                    <p>Σίγουρα, διαβάζοντας την πιο πάνω θεωρία θα αναρωτηθείτε 
+                        γιατί ασχοληθήκαμε με τις instance variables αν δεν είναι
+                        χρήσιμες μέσα σε ένα Stateless Session Bean.
+                        Βασικά οι λόγοι είναι δύο: πρώτον γιατί αν το 
+                        κάνετε δεν θα παραπονεθεί ο Application Server 
+                        οπότε θα εκτελέσει το πρόγραμμα μας ασχέτως αν 
+                        λάβετε παράξενα αποτελέσματα, και κατά δεύτερον 
+                        σαν θεωρία θα μας είναι πολύ χρήσιμη όταν μιλήσουμε 
+                        για τα Stateful Session Beans. Για τα Stateless 
+                        Session Beans όμως καλό είναι να αποφεύγετε την χρήση τους.</p>
+                    
+                    <p>Εκτός όμως από τα instance variables υπάρχει και κάτι 
+                        που ονομάζεται Stateless Bean Life Cycle. Στην ουσία 
+                        είναι δύο call back μέθοδοι με ονόματα <strong>@PostConstruct</strong>
+                        και <strong>@PreDestroy</strong>.</p>
+                    
+                    <p>Αφού έχουμε δημιουργήσει ένα Stateless Session Bean,
+                        το @PostConstruct annotation μπορεί να χρησιμοποιηθεί
+                        σε οποιαδήποτε μέθοδο την οποία θέλουμε να εκτελεστεί 
+                        πρώτη πριν εκτελεστούν οι υπόλοιπες μέθοδοι του bean.</p>
+                    
+                    <p>Όσο αφορά το @PreDestroy annotation, αυτό μπορεί 
+                        να χρησιμοποιηθεί σε οποιαδήποτε μέθοδο που θέλουμε
+                        να εκτελεστεί πριν σταματήσουμε την λειτουργία του
+                        bean π.χ. κάνοντας undeploy την εφαρμογή. Ας 
+                        τροποποιήσουμε λίγο το παράδειγμα μας από την ενότητα 
+                        4 και ας συμπεριλάβουμε και δύο ακόμα μεθόδους που θα 
+                        έχουν τα @PostConstruct και @Predestroy annotations αντίστοιχα</p>
+                    
+                    
+                     <p><strong>index.html</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flight Reservation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+              crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Reserve your flight</h1>
+       
+        <form method="POST" action="SimpleServlet">
+            <table>
+                <tr>
+                    <div class="form-group">
+                    <td><label for="dept">Where are you flying from: </label></td>
+                    <td><input type="text" id="dept" name="dept" /><br><br></td>
+                    </div>
+            </tr>
+            <tr> 
+                <div class="form-group">
+                <td><label for="dest">Where are you flying to: </label></td>
+                <td><input type="text" id="dest" name="dest" /><br><br></td>
+                </div>
+            </tr>
+            <tr>
+                <div class="form-group">
+                <td><label for="myday">What day are you flying? </label></td>
+                <td><select id="myday" name="myday">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option> </td>
+            </select>
+                </div>
+            </tr>
+   
+    <tr>
+        <td><input type="submit" class="btn btn-primary mb-2" value="Submit Form"/></td>
+        <td>   <input type="reset" class="btn btn-primary mb-2" value="Reset Form" /></td>
+    </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
+</xmp></pre>
+                    
+                   
+ <p><strong>Reservation.java</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+package com.mycompany;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.ejb.Stateless;
+
+@Stateless
+public class Reservation {
+
+    private String departure;
+    private String destination;
+    private String tripdate;
+    private String country_currency;
+    
+    @PostConstruct
+    private void initialize() {
+        country_currency = "euros";
+        System.out.println("The currency has been initialized");
+    }
+    
+    @PreDestroy
+    private void destroy() {
+        System.out.println("Cleaning up Reservation Bean");
+    }
+    
+     public String getcurrency() {
+        return country_currency;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public void setDeparture(String departure) {
+        this.departure = departure;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public String getTripdate() {
+        return tripdate;
+    }
+
+    public void setTripdate(String tripdate) {
+        this.tripdate = tripdate;
+    }
+
+    public double final_price(double taxes) {
+        return ((250*taxes)+250);
+    }
+ 
+}
+</xmp></pre>
+                    
+<p><strong>SimpleServlet.java</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+package com.mycompany;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SimpleServlet extends HttpServlet {
+@Inject
+Reservation reserve;
+    
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            String dept = request.getParameter("dept");
+            String dest = request.getParameter("dest");
+            String myday = request.getParameter("myday");
+            
+            double taxes = 0;
+            
+            if (myday.equals("Monday")) {
+            taxes = 0.25;
+            }
+            
+             if (myday.equals("Tuesday")) {
+            taxes = 0.23;
+            }
+             
+             
+            if (myday.equals("Wedbesday")) {
+            taxes = 0.21;
+            }
+            
+             if (myday.equals("Thursday")) {
+            taxes = 0.19;
+            }
+             
+              if (myday.equals("Friday")) {
+            taxes = 0.17;
+            }
+              
+               if (myday.equals("Saturday")) {
+            taxes = 0.15;
+            }
+               
+                if (myday.equals("Sunday")) {
+            taxes = 0.12;
+            }
+                
+            System.out.println("taxes are: " + taxes);    
+                
+            reserve.setDeparture(dept);
+            reserve.setDestination(dest);
+            reserve.setTripdate(myday);
+            
+
+
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Flight Reservation</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<p>Your Departure City is: " + reserve.getDeparture());
+            out.println("<p>Your final Destination is: " + reserve.getDestination());
+            out.println("<p>the day you are flying is: " + reserve.getTripdate());
+            out.println("<p>Your ticket price is: " + reserve.final_price(taxes)+ " " + reserve.getcurrency());
+            out.println("<p/>");
+            out.println("<a href='index.html'>Add another flight</a>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
+</xmp></pre>              
+ 
+<p>Η index.html σελίδα έχει παραμείνει η ίδια χωρίς καμία αλλαγή. 
+    Στο Stateless Session Bean Reservation προσθέσαμε μια ακόμα 
+    instance variable με το όνομα country_currency την οποία θέλουμε
+    να αρχικοποιήσουμε με την τιμή “euros” μέσω της μεθόδου initialize( ). 
+    Το annotation @PostConstruct δίνει την ιδιότητα στην μέθοδο
+    initialize( ) να εκτελεστεί πριν οποιαδήποτε άλλη μέθοδο,
+    με συνέπεια η μεταβλητή country_currency να έχει ήδη αρχικοποιηθεί
+    με την τιμή euros όταν κάποια getter μέθοδο την καλέσει. Για να
+    το αποδείξουμε αυτό προσθέσαμε και μια getter μέθοδο με το όνομα
+    getcurrency( ). Τέλος, προσθέσαμε το annotation @PreDestroy σε
+    μια μέθοδο με το όνομα destroy( ) που απλά μας δείχνει ένα
+    μήνυμα στην κονσόλα του Payara Server λίγο πριν γίνει undeploy
+    η εφαρμογή. Ας τα δοκιμάσουμε λοιπόν όλα αυτά. Ξεκινάμε τρέχοντας την εφαρμογή.</p>
+
+
+  <p><a><img src="java-ee-unit5/java-ee-unit5-1.JPG" alt="" class="center"></a></p>
+  <p><a><img src="java-ee-unit5/java-ee-unit5-2a.jpg" alt="" class="center"></a></p>
+                    
+  <p>Όπως βλέπουμε στο αποτέλεσμα που εμφανίζεται στον browser, 
+      το νόμισμα είναι euros που σημαίνει ότι η @PostConstruct 
+      μέθοδο λειτούργησε. Μπορούμε άλλωστε να το δούμε αυτό και 
+      από την κονσόλα του Payara Server.</p>        
+
+   <p><a><img src="java-ee-unit5/java-ee-unit5-2.JPG" alt="" class="center"></a></p>
+                    
+   <p>Ας πάμε τώρα στο tab Services, και κάντε undeploy την εφαρμογή μας που 
+       βρίσκεται στον Applications φάκελο του Payara.</p> 
+   
+   
+        <p><a><img src="java-ee-unit5/java-ee-unit5-3.JPG" alt="" class="center"></a></p>               
+                    
+        <p>Πριν η εφαρμογή σας καθαριστεί από τον Server και σταματήσει
+            να είναι διαθέσιμη, θα τρέξει η @PreDestroy μέθοδο.</p>   
+        
+         <p><a><img src="java-ee-unit5/java-ee-unit5-4.JPG" alt="" class="center"></a></p> 
+                    
+         <p>Τώρα ας απαντήσουμε το πιο βασικό ερώτημα – έχει
+             ουσία να χρησιμοποιήσουμε instance variables ή 
+             call back μεθόδους στα Stateless Session Beans?
+             Η απάντηση είναι <strong>όχι</strong>. Επειδή τα Stateless Session 
+             Beans δεν κρατάμε conversation state με τον client, 
+             οι δύο παραπάνω πράξεις μπορείς να μας επιστρέψουν λανθασμένα
+             αποτελέσματα. Ο κύριος όμως λόγος ύπαρξης των Stateless Session
+             Beans είναι πρώτον η γρήγορη απόδοση τους στα αιτήματα των clients 
+             (σε αυτό βοηθάει και το bean pooling του application server) 
+             αλλά το εύκολο scaling που μας παρέχουν όταν μεγαλώνει γρήγορα
+             ο αριθμός των client που χρησιμοποιούν την εφαρμογή μας.</p>  
+         
+         
+         
+         <p>Τελικά τι μπορούμε να γράψουμε σε ένα Stateless Session 
+             Bean? Μόνο μεθόδους! Στο πιο κάτω παράδειγμα 
+             δείχνουμε πως έχουμε τροποποιήσει το πρόγραμμα μας 
+             για ακόμα μια φορά. To index.html παραμένει το ίδιο.</p>
+         
+         
+<p><strong>Reservation.java</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+package com.mycompany;
+
+import java.util.Arrays;
+import java.util.List;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.ejb.Stateless;
+
+@Stateless
+public class Reservation {
+
+    public double final_price(double taxes) {
+        return ((250*taxes)+250);
+    }
+    
+     private List<String> agents = Arrays.asList(
+            "Agnes","Brian","Harry","Sally","Tom","Pamela",
+            "Mark","Wendy","Marcia","Graeme","Pravztik",
+            "Hadeep", "Florence", "Robert", "Zoe", "Frank" );
+
+    public String getNextAgentName() {
+        return agents.get((int)( Math.random() * agents.size() ));
+    }
+ 
+}
+
+</xmp></pre>
+                    
+<p><strong>SimpleServlet.java</strong></p>
+                     <pre class="prettyprint">
+ <xmp>
+package com.mycompany;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SimpleServlet extends HttpServlet {
+@Inject
+Reservation reserve;
+    
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            String dept = request.getParameter("dept");
+            String dest = request.getParameter("dest");
+            String myday = request.getParameter("myday");
+            
+            double taxes = 0;
+            
+            if (myday.equals("Monday")) {
+            taxes = 0.25;
+            }
+            
+             if (myday.equals("Tuesday")) {
+            taxes = 0.23;
+            }
+             
+             
+            if (myday.equals("Wedbesday")) {
+            taxes = 0.21;
+            }
+            
+             if (myday.equals("Thursday")) {
+            taxes = 0.19;
+            }
+             
+              if (myday.equals("Friday")) {
+            taxes = 0.17;
+            }
+              
+               if (myday.equals("Saturday")) {
+            taxes = 0.15;
+            }
+               
+                if (myday.equals("Sunday")) {
+            taxes = 0.12;
+            }
+                
+         
+
+
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Flight Reservation</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<p>Your Departure City is: " + dept);
+            out.println("<p>Your final Destination is: " + dest);
+            out.println("<p>the day you are flying is: " + myday);
+            out.println("<p>Your ticket price is: " + reserve.final_price(taxes));
+            out.println("<p>Our fiendly travel agent " + reserve.getNextAgentName()+
+                        " is available to assist you");
+            out.println("<p/>");
+            out.println("<a href='index.html'>Add another flight</a>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
+</xmp></pre>              
+                    
+                    
+<p>Το Reservation Stateless Session Bean τώρα αποτελείται
+    από δύο μόνο μεθόδους: η πρώτη είναι εκείνη που υπολογίζει
+    την τελική τιμή του ταξιδιού με βάση τον φόρο, και η δεύτερη
+    επιλέγει ένα τυχαίο όνομα, από μια λίστα με ονόματα, το 
+    οποίο αντιπροσωπεύει τον διαθέσιμο travel agent την ώρα 
+    που προσπαθούμε να κάνουμε κράτηση για το ταξίδι μας.</p>  
+
+
+    <p><a><img src="java-ee-unit5/java-ee-unit5-5.JPG" alt="" class="center"></a></p>               
+                    
+                    
+             <p><a><img src="java-ee-unit5/java-ee-unit5-6.JPG" alt="" class="center"></a></p>          
+
+                  <!--  <p >Ενότητα 1 - <a href="java-unit1-installation.html"><font color="#0000CC">Java Installation on Windows</font> </a><br /></p>
+                    <p >Ενότητα 2 - <a href="java-unit2-netbeans-and-hello-world-explanation.html"><font color="#0000CC">NetBeans Installation and Hello World Java Program Explanation</font> </a><br /></p>
+                    <p >Ενότητα 3 - <a href="java-unit3-JDK-JVM-and-Java-Project-structure-explanation.html"><font color="#0000CC">JDK and Application JAR creation</font> </a><br /></p> -->
+                </div><!-- .single-post-wrap -->
+
+             
+
+           
+
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να προγραμματίζετε σε Java EE. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
